@@ -4,6 +4,8 @@ package com.diallo.mockExam.service;
 import com.diallo.mockExam.model.User;
 import com.diallo.mockExam.repository.UserRepository;
 import com.diallo.mockExam.security.UserPrincipal;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
+@NoArgsConstructor
 public class UserService implements UserDetailsService {
 
 
