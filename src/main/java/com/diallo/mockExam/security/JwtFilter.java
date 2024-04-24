@@ -21,15 +21,15 @@ import java.io.IOException;
 public class JwtFilter extends OncePerRequestFilter {
 
 
+    @Autowired
     private JwtService jwtService;
-
     @Autowired
     private ApplicationContext applicationContext;
 
-    public JwtFilter(JwtService jwtService, ApplicationContext applicationContext) {
-        this.jwtService = jwtService;
-        this.applicationContext = applicationContext;
-    }
+//    public JwtFilter(JwtService jwtService, ApplicationContext applicationContext) {
+//        this.jwtService = jwtService;
+//        this.applicationContext = applicationContext;
+//    }
 
     // Method to lazily fetch the UserService bean from the ApplicationContext
     // This is done to avoid Circular Dependency issues

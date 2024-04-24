@@ -86,8 +86,8 @@ public class EmployeeController {
 
     @PostMapping("/add")
     public ResponseEntity<Employee>
-    addEmployeeRetirementPlan(@RequestBody @Valid RequestDTO retirementPlanDTO){
-        return ResponseEntity.ok(employeeService.addEmployeeRetirementPlan(retirementPlanDTO));
+    addEmployeeRetirementPlan(@RequestBody @Valid RequestDTO requestDTO){
+        return ResponseEntity.ok(employeeService.addEmployeeRetirementPlan(requestDTO));
     }
 
 

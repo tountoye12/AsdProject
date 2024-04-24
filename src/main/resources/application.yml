@@ -11,8 +11,11 @@ spring:
   jpa:
     show-sql: false
     hibernate:
-        ddl-auto: create
+        ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
+
+jwt:
+  secret: "TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg=\r\n"
