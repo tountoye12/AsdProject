@@ -24,7 +24,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-@CrossOrigin
+//@CrossOrigin
 public class SecurityConfig {
 
 

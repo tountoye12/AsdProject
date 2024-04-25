@@ -2,6 +2,7 @@ package com.diallo.mockExam.controller;
 
 
 import ch.qos.logback.core.subst.Token;
+import com.diallo.mockExam.dto.Credential;
 import com.diallo.mockExam.model.User;
 import com.diallo.mockExam.security.JwtService;
 import com.diallo.mockExam.service.UserService;
@@ -35,14 +36,17 @@ public class UserController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody User user) {
+    public ResponseEntity<Credential> loginUser(@RequestBody User user) {
+//        System.out.println("-- user");
+//        System.out.print(user);
         Authentication authentication = authenticationManager
                 .authenticate(
                         new UsernamePasswordAuthenticationToken(
                                 user.getUsername(), user.getPassword()
                         ));
         if(authentication.isAuthenticated()) {
-            return  ResponseEntity.ok(jwtService.generateToken(user.getUsername()));
+            Credential credential = new Credential(jwtService.generateToken(user.getUsername()));
+            return  ResponseEntity.ok(credential);
         }
 
         else {

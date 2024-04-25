@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class HomeController {
-
-
-
     @GetMapping("")
     public String home() {
         return "Hello guys, you are at home page";

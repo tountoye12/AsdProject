@@ -86,4 +86,8 @@ public class EmployeeService {
 //        retirementPlan.setEmployee(employee);
         return  employeeRepository.save(employee);
     }
+
+    public void delete(Long employeeId) {
+        employeeRepository.deleteById(employeeId);
+    }
 }
