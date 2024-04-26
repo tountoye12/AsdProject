@@ -5,6 +5,76 @@
 
 
 ### Problem Statement:
+
+    The company wants a RESTFul Web API to manage data about employees and 
+    their retirement plans. This API should allow enrolling new employees to their
+    retirement plans, viewing, updating, and maintaining plan details. 
+    Additionally, the HR managers need a feature to generate a report 
+    listing employees who will retire in the next month, termed as the 
+    "Monthly Upcoming Retirees" report. This report should i
+    include employees whose retirement dates fall within the upcoming month.
+## Functional requirements:
+
+    - Employee Management:
+        Ability to create, retrieve, update, and delete employee records.
+        Validation to ensure that required fields such as first name, last name, and yearly
+        salary are provided.
+        Endpoints to retrieve a list of all employees, retrieve a single 
+        employee by ID, update employee details, and delete an employee.
+    - Retirement Plan Management:
+        Functionality to enroll new employees to retirement plans.
+        Endpoints to create, retrieve, update, and delete retirement plan records.
+        Validation to ensure that required fields such as reference number, retirement date, 
+        and enrollment date are provided.
+        Endpoints to retrieve a list of all retirement plans, 
+        retrieve a single plan by ID, update plan details, and delete a plan.
+    - Monthly Upcoming Retirees Report:
+        Feature to generate a report listing employees who will retire in the next month.
+        Endpoint to retrieve a list of employees with retirement dates falling within 
+        the upcoming month.
+        The report should include employee details such as name, retirement date,
+        and retirement plan details.
+    - Security:
+        Authentication and authorization mechanisms to ensure that only authorized 
+        users can access the API endpoints.
+        Implementation of role-based access control to restrict certain 
+        functionalities to specific user roles.
+    - Validation and Error Handling:
+        Input validation to ensure that data submitted to the API is of the correct format and
+        meets specified criteria.
+        Proper error handling to provide informative error messages in case of 
+        invalid requests or server-side errors.
+        Use of appropriate HTTP status codes to indicate the 
+        success or failure of API requests.
+## Architecture Diagram:
+
+``` mermaid
+
+flowchart LR
+    subgraph "GitHub Actions Workflow"
+        GitHubActions --> Build
+        Build --> Test
+        Test --> Deploy
+        Deploy --> AzureCloud
+    end
+
+    subgraph "Developer's Environment"
+        SpringBoot((Spring Boot Application))
+        MySQL((MySQL Docker Container))
+        Maven((Maven))
+    end
+
+    subgraph "Azure Cloud"
+        AzureVM((Azure Virtual Machine))
+        SpringBoot --> AzureVM
+        MySQL --> AzureVM
+    end
+
+    GitHubActions --> SpringBoot
+    SpringBoot --> MySQL
+    Maven --> Build
+
+```
 You may use this skeleton as a starting point for your solution. It contains a simple
 Spring Boot web application written using Java 17 and built using Maven.
 
