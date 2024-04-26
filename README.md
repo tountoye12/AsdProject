@@ -75,9 +75,6 @@ flowchart LR
     Maven --> Build
 
 ```
-You may use this skeleton as a starting point for your solution. It contains a simple
-Spring Boot web application written using Java 17 and built using Maven.
-
 
 ## Class Diagram
 ```mermaid
@@ -147,7 +144,7 @@ The application is built using maven.
 
 - To build the application, use `mvn clean install`
 - Any tests that you add under the `tests` folder can be run using `mvn clean test`
-- To run the application, use `gradlew bootRun`
+- To run the application, use ` `
 
 ### Table of Contents ###
 ### Overview ###
@@ -183,23 +180,42 @@ where I am integrating JWT with Spring Security 6 .
 The project is organized into three modules:
 
 * EMS: Manages employee information and their retirement plan.
-* Video Module: Handles video information and operations.
-* VideoCopy Module: Manages video copies and associated rentals.
 
 ### Setup Instructions ###
 Prerequisites
 Java Development Kit (JDK) installed
-The latest version of STS (Spring Tool Suite) IDE which is built-in support for Gradle
-IDE: STS (Spring Tool Suite) for development
+The latest version Intellij support for Maven
+IDE:  Intellij for development
 
 ### API Endpoints ###
 ### User API ###
-* Post http://localhost:8080/api/v1/users/auth/add: Add new User 
+* Post http://localhost:8080/api/v1/users/auth/add: Add new User
+
+      {
+         "username": "diallo",
+         "password": "Diallo10@"                                       
+      }
+
 * Post http://localhost:8080/api/v1/users/auth/login: To create the Token 
+
+         {
+           "username": "diallo",
+           "password": "Diallo10@"                                       
+         }
+
 ### Employee API ###
 * GET http://localhost:8080/api/v1/employees/list: Retrieve all employees.
 * GET http://localhost:8080/api/v1/employees/{employeeId}: Retrieve employee by ID.
-* POST http://localhost:8080/api/v1/employees/add: Create a new employee with retirement plan.
+* POST http://localhost:8080/api/v1/employees/add: Create a new employee with retirement plan. 
+  {
+    "firstName": "Anna",
+    "lastName": "Smith",
+    "yearlySalary": 150000.00,
+    "referenceNumber": "SM1009",
+    "enrollmentDate": "2023-08-16",
+    "retirementDate": "2026-09-29",
+    "monthlyContribution": null
+    }
 * PUT http://localhost:8080/pi/v1/employees/{employeeId}: Update an existing employee.
 * DELETE http://localhost:8080/api/v1/employees/{employeeId}: Delete an employee.
 
