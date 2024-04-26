@@ -31,6 +31,34 @@ erDiagram
     Employee }|--|{ User : has
 ```
 
+## ER Diagram
+
+
+```mermaid
+
+erDiagram
+    Employee {
+        Long employeeId
+        String firstName
+        String lastName
+        Double yearlySalary
+    }
+    RetirementPlan {
+        Long planId
+        String referenceNumber
+        LocalDate retirementDate
+        LocalDate enrollmentDate
+        Double monthlyContribution
+    }
+    User {
+        Long id
+        String username
+        String password
+    }
+    Employee ||--o{ RetirementPlan : owns
+    Employee }|--|{ User : has
+
+```
 
 ## Requirements
 
