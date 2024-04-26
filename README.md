@@ -1,5 +1,9 @@
 
-### Author: Mamadou Adama Diallo
+### Author: 
+- Name:  Mamadou Adama Diallo
+- LinkedIn `https://www.linkedin.com/in/amamadoudiallo/`
+
+### Problem Statement:
 You may use this skeleton as a starting point for your solution. It contains a simple
 Spring Boot web application written using Java 17 and built using Maven.
 
@@ -83,7 +87,13 @@ The application is built using maven.
 * API Endpoints
 * Database Configuration
 
-This is a fully functional Java Spring Boot application is designed to manage customers, videos, video copies, and rentals. It provides RESTful API endpoints for performing CRUD operations on these entities. The application uses a modular structure with separate modules for Customer , Video, VideoCopy, and Rental, each encapsulating related functionality. For API authentication/authorization I'm using JWT with Spring Security 6, where I am integrating JWT with Spring Security 6 .
+This is a fully functional Java Spring Boot application is designed to manage employees,
+and retirement plan for employee. It provides RESFull API endpoints for performing
+CRUD operations on these entities. The application uses a modular structure 
+with separate modules for Employee , RetirementPlan and User, 
+each encapsulating related functionality. 
+For API authentication/authorization I'm using JWT with Spring Security 6, 
+where I am integrating JWT with Spring Security 6 .
 
 ### Technologies Used ###
 * Java
