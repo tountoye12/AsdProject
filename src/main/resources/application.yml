@@ -7,25 +7,27 @@
 #  application:
 #    name: exammock
 
-spring:
-  application:
-    name: exammock
+# Local config
+#spring:
+#  application:
+#    name: exammock
+#
+#    # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/mydatabase
+#    username: root
+#    password: "password"
+#    # Hibernate Properties
+#  jpa:
+#    show-sql: false
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#        format_sql: true
 
-    # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
-  datasource:
-    url: jdbc:mysql://localhost:3306/mydatabase
-    username: root
-    password: "password"
-    # Hibernate Properties
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        format_sql: true
-
+# End local config
 # For production settings here
 
 
@@ -51,6 +53,21 @@ spring:
 #      hibernate:
 #        dialect: org.hibernate.dialect.MySQL5Dialect
 #        format_sql: true
+
+
+# Use this for Dockerizing the whole app
+spring:
+  application:
+    name: finalProject
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/employeedb
+    username: ${MYSQL_USER:diallo}
+    password: ${MYSQL_PASSWORD:diallo}
+
+# End Doc config Dockerizing the whole app
 
 jwt:
   secret: "TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg=\r\n"
