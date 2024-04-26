@@ -1,7 +1,8 @@
 
 ### Author: 
 - Name:  Mamadou Adama Diallo
-- LinkedIn `https://www.linkedin.com/in/amamadoudiallo/`
+- Profile: [Mamadou Adama Diallo's LinkedIn](https://www.linkedin.com/in/amamadoudiallo/ "visit my profile")
+
 
 ### Problem Statement:
 You may use this skeleton as a starting point for your solution. It contains a simple
