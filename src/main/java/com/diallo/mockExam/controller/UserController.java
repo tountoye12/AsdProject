@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v1/users/auth")
 public class UserController {
 
 
@@ -29,7 +29,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/addUser")
+    @PostMapping("/add")
     public ResponseEntity<String> addUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.adduser(user));
     }

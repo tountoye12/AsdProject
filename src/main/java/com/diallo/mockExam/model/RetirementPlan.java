@@ -11,11 +11,12 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "retirementplan")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "retirementplan")
 public class RetirementPlan {
 
     @Id
