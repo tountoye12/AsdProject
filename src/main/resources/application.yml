@@ -7,50 +7,50 @@
 #  application:
 #    name: exammock
 
-#spring:
-#  application:
-#    name: exammock
-#
-#    # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/mydatabase
-#    username: root
-#    password: "password"
-#    # Hibernate Properties
-#  jpa:
-#    show-sql: false
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.MySQLDialect
-#        format_sql: true
+spring:
+  application:
+    name: exammock
+
+    # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydatabase
+    username: root
+    password: "password"
+    # Hibernate Properties
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
 
 # For production settings here
 
 
-spring:
-  application:
-    name: exammock
+#spring:
+#  application:
+#    name: exammock
 
   #  hostname=employee-server.mysql.database.azure.com
   #  username=diallo
   #  password={your-password}
   #  ssl-mode=require
   # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
-  datasource:
-    url: jdbc:mysql://employee-server.mysql.database.azure.com:3306/employeedb?useSSL=true
-    username: diallo
-    password: "Tountoye@62210@"
-  #      # Hibernate Properties
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-        format_sql: true
+#  datasource:
+#    url: jdbc:mysql://employee-server.mysql.database.azure.com:3306/employeedb?useSSL=true
+#    username: diallo
+#    password: Tountoye@62210@
+#  #      # Hibernate Properties
+#  jpa:
+#    show-sql: false
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+#        format_sql: true
 
 jwt:
   secret: "TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg=\r\n"
