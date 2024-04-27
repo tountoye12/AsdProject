@@ -6,15 +6,19 @@ import com.diallo.mockExam.dto.Credential;
 import com.diallo.mockExam.model.User;
 import com.diallo.mockExam.security.JwtService;
 import com.diallo.mockExam.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+@Controller
 @RestController
 @RequestMapping("/api/v1/users/auth")
+@Slf4j
 public class UserController {
 
 
@@ -31,6 +35,9 @@ public class UserController {
 
     @PostMapping("/add")
     public ResponseEntity<String> addUser(@RequestBody User user) {
+        log.info("Adding user: " + user);
+        System.out.println("Test");
+        System.out.println(user);
         return ResponseEntity.ok(userService.adduser(user));
     }
 

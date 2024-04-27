@@ -7,11 +7,8 @@ services:
     build: .
     ports:
       - 8000-8999:8080
-    environment:
-      MYSQL_HOST: mysqldb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_PORT: 3306
+    env_file: .env
+
   mysqldb:
     container_name: mysqldb
     image: mysql

@@ -26,6 +26,7 @@ public class JwtService {
     // Secret Key for signing the JWT. It should be kept private.
     @Value("${jwt.secret}")
     private  String SECRET;
+    //private final String SECRET = "TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg";
 
     // Generates a JWT token for the given userName.
     public String generateToken(String username) {
